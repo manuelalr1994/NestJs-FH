@@ -1,0 +1,68 @@
+******************* NestJs con PostgreSQL ******************* 
+
+> npm install -g @nestjs/cli
+> nest new cursoFazt
+> npm run start:dev
+> nest g module users  //  crea modulo
+> nest g controller users --no-spec
+> nest g service users --no-spec
+> npm install --save typeorm pg
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+******************* SQL COMANDOS BASICOS ******************* 
+
+> CREATE DATABASE <nombre base de datos>;
+> DROP DATABASE <nombre base de datos>;
+
+******************* CREATE TABLE ******************* 
+
+CREATE TABLE <nombre_tabla> (
+   id SERIAL PRIMARY KEY,
+   titulo VARCHAR(50) NOT NULL,
+   fecha DATE DEFAULT CURRENT_DATE,
+   estado BOOLEAN DEFAULT false,
+   id_usuario int,
+   FOREING KEY (id_usuario) REFERENCES usuarios(id_usuarios)
+);
+
+******************* UPDATE ******************* 
+
+UPDATE <nombre_tabla>
+   set nombre = 'Carbo'
+   where id = 3;
+	
+select * from <nombre_tabla>;
+
+******************* DELETE ******************* 
+
+DELETE FROM <nombre_tabla>
+   where id = 6;
+	
+select * from <nombre_tabla>;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+******************* GITHUB Basic Commands ******************* 
+- git init
+- git add <file>
+- git status
+- git checkout -- <file>
+- git commit / - git commit -m "mensaje"
+- git push
+- git pull
+- git clone
+- git branch
+- git log
+- git switch (branch)
+- git remote -v  // verifica si es la carpeta raiz
+- git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+- git lg
+******** Commit *********
+> git commit
+   i - comenzar escritura
+   :wq - salir del commit
+***************************
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
